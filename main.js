@@ -72,6 +72,9 @@ function calculateTotalCampaignDiamonds(coins) {
     info.recovered = convertableDiamonds;
   } while (convertableDiamonds > minimumCost);
 
+  conversionInfo.count = 0;
+  conversionInfo.coins = 0;
+  conversionInfo.excess = info.recovered;
   summary.push({
     ...info,
     ...conversionInfo
