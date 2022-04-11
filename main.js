@@ -94,7 +94,7 @@ window.addEventListener('load', function () {
     diamonds to coins repeatedly using the conversion rates below</p>`,
     `<div id="content">`,
     `<div id="settings" class="w3-responsive">`,
-    `<table id="rates" class="w3-table-all w3-half">`,
+    `<table id="rates" class="w3-table-all w3-third w3-centered">`,
     `<tr><th>Diamond Cost</th><th>Output Coins</th><th>Return Percentage</th></tr>`,
     ...Object.keys(conversionRates).sort((a, b) => {
       return Number(b) - Number(a);
@@ -112,7 +112,7 @@ window.addEventListener('load', function () {
     `<div id="result" style="display:none;">`,
     `<h2>Result</h2>`,
     `<div class="w3-responsive">`,
-    `<table id="summary" class="w3-table-all">`,
+    `<table id="summary" class="w3-table-all w3-centered">`,
     `</table>`,
     `</div>`,
     `<h3>Estimated Total:&nbsp;<strong id="total"></strong></h3>`,
