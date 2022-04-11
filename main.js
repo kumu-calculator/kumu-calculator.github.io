@@ -95,7 +95,7 @@ window.addEventListener('load', function () {
     `<div id="content">`,
     `<div id="settings" class="w3-responsive">`,
     `<table id="rates" class="w3-table-all w3-half">`,
-    `<tr><th>Diamond Cost</th><th>Converted Coins</th><th>Percent Return</th></tr>`,
+    `<tr><th>Diamond Cost</th><th>Output Coins</th><th>Return Percentage</th></tr>`,
     ...Object.keys(conversionRates).sort((a, b) => {
       return Number(b) - Number(a);
     }).map(cost => {
@@ -127,7 +127,7 @@ window.addEventListener('load', function () {
     }
     let result = calculateTotalCampaignDiamonds(Number(coinsInput.value));
     document.getElementById("summary").innerHTML = [
-      `<tr><th>Dropped Coins</th><th>Recovered Dias</th><th>Conversion Cost</th><th>Conversion Rate</th><th>Conversion Count</th><th>Returned Coins</th><th>Excess Dias</th></tr>`,
+      `<tr><th>Dropped Coins</th><th>Recovered Diamonds</th><th>Diamond Cost</th><th>Output Coins</th><th>Conversion Count</th><th>Returned Coins</th><th>Excess Diamonds</th></tr>`,
       ...result.info.map(info => {
         return `<tr><td>${info.drop}</td><td>${info.recovered}</td><td>${info.cost}</td><td>${info.rate}</td><td>${info.count}</td><td>${info.coins}</td><td>${info.excess}</td></tr>`;
       })
