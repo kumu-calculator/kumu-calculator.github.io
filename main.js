@@ -132,7 +132,7 @@ window.addEventListener('load', function () {
         return `<tr><td>${info.drop}</td><td>${info.recovered}</td><td>${info.cost}</td><td>${info.rate}</td><td>${info.count}</td><td>${info.coins}</td><td>${info.excess}</td></tr>`;
       })
     ].join("");
-    console.log(result);
+
     document.getElementById("total").textContent = result.total;
     document.getElementById("result").style.display = "block";
   });
