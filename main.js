@@ -94,7 +94,7 @@ window.addEventListener('load', function () {
     diamonds to coins repeatedly using the conversion rates below</p>`,
     `<div id="content">`,
     `<div id="settings" class="w3-responsive">`,
-    `<table id="rates" class="w3-table-all">`,
+    `<table id="rates" class="w3-table-all w3-half">`,
     `<tr><th>Diamond Cost</th><th>Converted Coins</th><th>Percent Return</th></tr>`,
     ...Object.keys(conversionRates).sort((a, b) => {
       return Number(b) - Number(a);
