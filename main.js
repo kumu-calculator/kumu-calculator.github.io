@@ -52,13 +52,16 @@ function convertDiamondsToCoins(diamonds) {
 function calculateTotalCampaignDiamonds(coins) {
   let total = coins; // Initial coins are always added
   let convertableDiamonds = Math.floor(0.8 * coins); // Maximum of 80% can be received by co-hosts
-  let conversionInfo;
+  let conversionInfo = {
+    cost: minimumCost,
+    rate: conversionRates[minimumCost].coins
+  };
   let summary = [];
   let info = {};
 
   info.drop = coins;
   info.recovered = convertableDiamonds;
-  do {
+  while (convertableDiamonds >= minimumCost) {
     conversionInfo = convertDiamondsToCoins(convertableDiamonds);
     summary.push({
       ...info,
@@ -70,7 +73,7 @@ function calculateTotalCampaignDiamonds(coins) {
 
     info.drop = conversionInfo.coins;
     info.recovered = convertableDiamonds;
-  } while (convertableDiamonds > minimumCost);
+  } //while (convertableDiamonds > minimumCost);
 
   conversionInfo.count = 0;
   conversionInfo.coins = 0;
